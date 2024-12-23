@@ -73,7 +73,6 @@ plt.show()
 # Predictive Modeling
 
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import mean_squared_error
 
 # Defining features and target
@@ -106,10 +105,11 @@ print(region_mean.head())
 
 # Now we will save the model
 plt.figure(figsize=(10, 6))
-region_mean.plot(kind = 'bar', color= 'Blue')
+plt.bar(region_mean['Region'], region_mean['Unemployment Rate'])
 plt.title('Average Unemplpoymant Rate by Region')
 plt.xlabel('Region')
 plt.ylabel('Average Unemployment Rate')
+plt.xticks(rotation=45)
 plt.tight_layout()
 plt.savefig('unemployment_rate_by_region.png')
 plt.show()
