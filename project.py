@@ -27,7 +27,8 @@ print("\nMissing Values")
 print(data.isnull().sum())
 
 # Now will fill that empty values with the mean of the rest
-data.fillna(data.mean(), inplace=True)
+data.fillna(data.select_dtypes(include=[np.number]).mean(), inplace=True)
+
 
 # Now we will use EDA which means Exploratory Data Analysis to get more insights about the dataset.
 
