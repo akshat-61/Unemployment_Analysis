@@ -71,7 +71,6 @@ print("\nRegion with the highest Unemployment rates: ")
 print(region_mean.head())
 
 
-# Now we will save the model
 plt.figure(figsize=(10, 6))
 plt.bar(region_mean['Region'], region_mean['Unemployment Rate'])
 plt.title('Average Unemplpoymant Rate by Region')
